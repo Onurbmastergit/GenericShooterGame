@@ -8,6 +8,7 @@ TagManager:
   - Barril
   - Bullet
   - AttackArea
+  - Zombie
   layers:
   - Default
   - TransparentFX

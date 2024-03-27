@@ -20,10 +20,12 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
 
         }
+        if (other.CompareTag("Zombie")) 
+        {
+            other.GetComponent<EnemyStatus>().ReceberDano(danoBala);
+            Destroy(gameObject);
+        }
     }
-    void DestruirBala() 
-    {
-        
-    }
+  
     
 }

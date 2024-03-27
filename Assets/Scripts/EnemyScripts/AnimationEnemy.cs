@@ -7,6 +7,7 @@ public class AnimationEnemy : MonoBehaviour
     public Animator animator;
     public bool attack;
     public bool die;
+    public Collider colliderAttack;
 
     private void Start()
     {
@@ -18,14 +19,17 @@ public class AnimationEnemy : MonoBehaviour
         animator.SetBool("Die", die);
         if (die == true)
         {
-            {
-                Invoke("DestruirCorpo", 1f);
-            }
+            attack = false;
         }
 
-        void DestruirCorpo()
-        {
-            Destroy(gameObject);
-        }
+       
+    }
+    public void EnableCollider() 
+    {
+        colliderAttack.enabled = true;
+    }
+    public void DisableCollider() 
+    {
+        colliderAttack.enabled = false;
     }
 }
