@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class SpawnerBullets : MonoBehaviour
 {
-    public GameObject prefabToSpawn; // O prefab que vocÍ deseja instanciar
-    public Transform spawnTransform; // O transform onde os objetos ser„o instanciados
-    public float spawnDistance = 5f; // Dist‚ncia na frente do transform para spawnar os objetos
+     public GameObject[] prefabsToSpawn; // Prefabs das balas para cada n√≠vel
+    public Transform spawnTransform; // O transform onde os objetos ser√£o instanciados
+    public float spawnDistance = 5f; // Dist√¢ncia na frente do transform para spawnar os objetos
     public float spawnInterval = 1f; // Intervalo de tempo entre cada spawn
     public float tempoDeVida;
+    public  static int level; // N√≠vel atual
 
     private IEnumerator StartSpawnRoutine()
     {
         while (true)
         {
-            // Calcula a posiÁ„o de spawn na frente do transform
+            // Calcula a posi√ß√£o de spawn na frente do transform
             Vector3 spawnPosition = spawnTransform.position + spawnTransform.forward * spawnDistance;
 
-            // Instancia o objeto na posiÁ„o calculada
+            // Seleciona o prefab com base no n√≠vel
+            int index = Mathf.Clamp(level, 0, prefabsToSpawn.Length - 1);
+            GameObject prefabToSpawn = prefabsToSpawn[index];
+
+            // Instancia o objeto na posi√ß√£o calculada
             GameObject newObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
 
-            // Destruir o objeto apÛs um pequeno atraso
+            // Destruir o objeto ap√≥s um pequeno atraso
             Destroy(newObject, tempoDeVida);
 
             // Aguarda o intervalo de spawn
@@ -30,10 +35,10 @@ public class SpawnerBullets : MonoBehaviour
 
     void Start()
     {
-        // Verifica se o prefabToSpawn e o spawnTransform est„o atribuÌdos
-        if (prefabToSpawn == null || spawnTransform == null)
+        // Verifica se o spawnTransform est√° atribu√≠do
+        if (spawnTransform == null)
         {
-            Debug.LogError("Prefab ou Transform n„o atribuÌdos ao Prefab Spawner.");
+            Debug.LogError("Transform n√£o atribu√≠do ao Prefab Spawner.");
             return;
         }
 

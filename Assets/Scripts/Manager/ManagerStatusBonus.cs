@@ -10,7 +10,7 @@ public class ManagerStatusBonus : MonoBehaviour
 
     public TextMeshProUGUI vidaStatus;
     public GameObject barril;
-
+    public UpgradeWeapon upgradeWeapon;
     // Cores
     Color32 corVermelho = new Color32(249, 6, 0, 255); // Red = F90600
     Color32 corVerde = new Color32(0, 249, 22, 255);   // Green = 00F916
@@ -51,7 +51,10 @@ public class ManagerStatusBonus : MonoBehaviour
     {
         if (lifeBarrilAtual <= 0)
         {
+           
+            SpawnerBullets.level = upgradeWeapon.weaponLevel;
             Destroy(barril);
         }
     }
+   
 }

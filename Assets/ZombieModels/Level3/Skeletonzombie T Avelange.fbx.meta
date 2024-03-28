@@ -3,7 +3,42 @@ guid: bbed3bccf49ddea449a98e89f8e723b9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_Material
+    second: {fileID: 2100000, guid: 265a326104bf4474099c2b5d11b64a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_Material1
+    second: {fileID: 2100000, guid: fc843fc5acb760949b832840da43c33c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_body_diffuse
+    second: {fileID: 2800000, guid: 946449f3a455dbb408107d4c2002ccdb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_diffuse
+    second: {fileID: 2800000, guid: 02ffb246511d71c4fbe2ac3f87351e0e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_glow
+    second: {fileID: 2800000, guid: 759b18e5d2564404dadab269bb836a70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_normal
+    second: {fileID: 2800000, guid: 61b45beea292adb4ba22f6b1c8f1e0b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeletonZombie_specular
+    second: {fileID: 2800000, guid: c922f1021a5157540a5556a915e1fa87, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,7 +68,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -88,7 +123,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.012
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
@@ -97,7 +132,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

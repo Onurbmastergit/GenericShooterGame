@@ -24,6 +24,7 @@ public class BulletMove : MonoBehaviour
         {
             other.GetComponent<EnemyStatus>().ReceberDano(danoBala);
             Destroy(gameObject);
+            
         }
     }
   

@@ -11,6 +11,7 @@ public class EnemyStatus : MonoBehaviour
     public int vidaBase = 35;
     public int level = 0;
     public bool boss;
+    public int danoZumbiBase = 3;
 
     Color32 corVermelho = new Color32(249, 6, 0, 255); // Red = F90600
     Color32 corVerde = new Color32(0, 249, 22, 255);   // Green = 00F916
@@ -19,24 +20,29 @@ public class EnemyStatus : MonoBehaviour
     public AnimationEnemy AnimationEnemy;
     public UnityEngine.UI.Image lifeBarStatus;
     public TextMeshProUGUI levelZumbi;
+    
 
     private void Start()
     {
         if (level == 1)
         {
             vidaBase = 50;
+            
         }
         else if (level == 2)
         {
             vidaBase *= 2;
+            danoZumbiBase *= 2;
         }
         else if (level == 3)
         {
             vidaBase *= 3;
+            danoZumbiBase *= 3;
         }
         else if (boss == true) 
         {
             vidaBase *= 4;
+            danoZumbiBase *= 4;
         }
         AnimationEnemy = GetComponent<AnimationEnemy>();
         vidaAtual = vidaBase;
@@ -66,7 +72,7 @@ public class EnemyStatus : MonoBehaviour
     }
     void VerificarMorte() 
     {
-        if (vidaAtual == 0) 
+        if (vidaAtual <= 0) 
         {
             AnimationEnemy.die = true;
             Invoke("DestruirCorpo", 2f);
