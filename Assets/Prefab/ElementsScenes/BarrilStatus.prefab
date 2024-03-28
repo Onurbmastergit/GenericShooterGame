@@ -90,7 +90,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1152328327681276435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,7 +719,6 @@ MonoBehaviour:
   vidaStatus: {fileID: 5933581564523703544}
   barril: {fileID: 2305013957863096919}
   upgradeWeapon: {fileID: 8163196976640764885}
-  explosion: {fileID: 0}
 --- !u!65 &2541622968607881107
 BoxCollider:
   m_ObjectHideFlags: 0

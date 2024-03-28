@@ -14,6 +14,7 @@ public class CollisonTrigger : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player"); // Encontrar o jogador e guardar sua referência
+        Enemy.transform.Rotate(0, -90 ,0);
     }
 
     void Update()
