@@ -315,8 +315,8 @@ Transform:
   m_GameObject: {fileID: 6789781754658638427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0776, y: 0.604, z: 1.1663}
-  m_LocalScale: {x: 2.130677, y: 1, z: 2.2325122}
+  m_LocalPosition: {x: -0.0345, y: 0.604, z: 1.9038}
+  m_LocalScale: {x: 3.9104762, y: 1, z: 3.7075393}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1842998018376414103}
@@ -1411,10 +1411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaAtual: 0
-  vidaBase: 35
+  vidaBase: 50
   level: 3
   boss: 0
-  danoZumbiBase: 3
+  danoZumbiBase: 5
   AnimationEnemy: {fileID: 6847166496536732493}
   lifeBarStatus: {fileID: 3033305214847860800}
   levelZumbi: {fileID: 4047949458194795132}

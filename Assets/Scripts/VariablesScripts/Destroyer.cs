@@ -6,7 +6,14 @@ public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        // Destruir o objeto que este script está anexado
-        Destroy(other.gameObject);
+        if (other.CompareTag("Zombie")) 
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Barril")) 
+        {
+            Destroy(other.gameObject);
+        }
+       
     }
 }

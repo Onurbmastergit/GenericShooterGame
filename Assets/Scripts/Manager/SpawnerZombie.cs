@@ -26,7 +26,7 @@ public class SpawnerZombie : MonoBehaviour
             // Instancia o objeto na posição calculada
             GameObject newObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
 
-            Destroy(newObject , LifeTime);
+            //Destroy(newObject , LifeTime);
             spawnCount++;
             level = Random.Range(0,3);
             SpawnarBoss();
