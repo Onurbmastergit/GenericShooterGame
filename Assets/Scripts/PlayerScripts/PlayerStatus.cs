@@ -9,9 +9,9 @@ public class PlayerStatus : MonoBehaviour
 {
     public int vidaTotal = 200;
     public int vidaAtual;
-    public string Username;
+    
 
-    public TextMeshProUGUI Uname;
+    
     public UnityEngine.UI.Image vidaStatusBar;
 
 
@@ -20,7 +20,6 @@ public class PlayerStatus : MonoBehaviour
     Color32 corAmarelo = new Color32(249, 192, 0, 255);// Yellow = F9C000
     void Start ()
     {
-        Uname.text = Username;
         vidaAtual = vidaTotal;
     }
     void Update()

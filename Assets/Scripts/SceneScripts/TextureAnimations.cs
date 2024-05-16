@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TextureAnimations : MonoBehaviour
 {
-    public float offsetAmount =  0.1f; // Valor pelo qual você deseja modificar o offset
+    public float offsetAmount =  0.1f; // Valor pelo qual vocï¿½ deseja modificar o offset
 
     void Update()
     {
-        Renderer renderer = GetComponent<Renderer>(); // Obtém o componente Renderer do objeto
+        Renderer renderer = GetComponent<Renderer>(); // Obtï¿½m o componente Renderer do objeto
         if (renderer != null && renderer.material != null)
         {
-            // Obtém o deslocamento atual da textura no material
+            // Obtï¿½m o deslocamento atual da textura no material
             Vector2 currentOffset = renderer.material.mainTextureOffset;
             // Modifica o deslocamento no eixo x
             currentOffset.x -= offsetAmount;
@@ -20,7 +20,7 @@ public class TextureAnimations : MonoBehaviour
         }
         else
         {
-            Debug.LogError("O objeto não possui um Renderer ou o material não está atribuído.");
+            Debug.LogError("O objeto nï¿½o possui um Renderer ou o material nï¿½o estï¿½ atribuï¿½do.");
         }
     }
 
